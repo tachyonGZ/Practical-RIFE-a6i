@@ -13,7 +13,7 @@ dependencies = [
     "moviepy>=2.2.1",
     "numpy>=2.5.4",
     "opencv-python>=5.0.0.93",
-    "scikit-video>=1.1.11",
+    "scikit-video>=1.3.0",
     "torch>=2.15.0",
     "torchvision>=0.29.2",
     "tqdm>=4.70.1",
@@ -25,6 +25,7 @@ practical-rife-a6i = "practical_rife_a6i:main"
 [tool.uv.sources]
 torch = { index = "pytorch-cu134" }
 torchvision = { index = "pytorch-cu134" }
+scikit-video = { url = "https://github.com/scikit-video/scikit-video/releases/download/v1.3.0/scikit_video-1.3.0-py3-none-any.whl" }
 
 [[tool.uv.index]]
 name = "pytorch-cu134"

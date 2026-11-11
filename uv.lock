@@ -590,7 +590,7 @@ requires-dist = [
     { name = "moviepy", specifier = ">=2.2.1" },
     { name = "numpy", specifier = ">=2.5.4" },
     { name = "opencv-python", specifier = ">=5.0.0.93" },
-    { name = "scikit-video", specifier = ">=1.1.11" },
+    { name = "scikit-video", url = "https://github.com/scikit-video/scikit-video/releases/download/v1.3.0/scikit_video-1.3.0-py3-none-any.whl" },
     { name = "torch", specifier = ">=2.15.0", index = "https://download.pytorch.org/whl/cu134" },
     { name = "torchvision", specifier = ">=0.29.2", index = "https://download.pytorch.org/whl/cu134" },
     { name = "tqdm", specifier = ">=4.70.1" },
@@ -656,17 +656,27 @@ wheels = [
 
 [[package]]
 name = "scikit-video"
-version = "1.1.11"
-source = { registry = "https://pypi.org/simple" }
+version = "1.3.0"
+source = { url = "https://github.com/scikit-video/scikit-video/releases/download/v1.3.0/scikit_video-1.3.0-py3-none-any.whl" }
 dependencies = [
     { name = "numpy" },
     { name = "pillow" },
     { name = "scipy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/80/eb/f67edc284d99d512011e2022f93b5110ab812c60dfa8b7790abda16a3a70/scikit-video-1.1.11.tar.gz", hash = "sha256:5061d2aeae1892b73a97c89a82942b3e8eebf2fe23e59c60e06ede5f8a24ed1e", size = 2237586, upload-time = "2018-09-20T02:10:11.512Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b1/a6/c69cad508139a342810ae46e946ebb3256aa6e42f690d901bb68f50582e3/scikit_video-1.1.11-py2.py3-none-any.whl", hash = "sha256:4fc131e509aaeeb0eecb6acb58b92a7ef905be5dbe27ed1d1ae089634b601f23", size = 2255186, upload-time = "2018-09-18T02:41:44.968Z" },
+    { url = "https://github.com/scikit-video/scikit-video/releases/download/v1.3.0/scikit_video-1.3.0-py3-none-any.whl", hash = "sha256:4b5a70458f2a303cf9f150906a19f487cfc96a36092909a9aa2d9ddf1c79126b" },
 ]
+
+[package.metadata]
+requires-dist = [
+    { name = "numpy", specifier = ">=1.22" },
+    { name = "numpydoc", marker = "extra == 'docs'" },
+    { name = "pillow", specifier = ">=9.0" },
+    { name = "pytest", marker = "extra == 'test'", specifier = ">=7" },
+    { name = "scipy", specifier = ">=1.9" },
+    { name = "sphinx", marker = "extra == 'docs'", specifier = ">=5" },
+]
+provides-extras = ["test", "docs"]
 
 [[package]]
 name = "scipy"
